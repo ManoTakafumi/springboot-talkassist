@@ -1,0 +1,30 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Talk Assist</title>
+    <link rel="stylesheet" th:href="@{/css/destyle.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">Talk Assist</h1>
+
+    <p class="description">
+        会話に不安を感じた時に、<br>
+        場面に合う無難な会話を提案します。
+    </p>
+
+    <form action="/suggest" method="get" class="search-form">
+        <label class="label">キーワードを入力してください：</label><br>
+        <input type="text" name="keyword" class="input" placeholder="例：朝　挨拶(未入力でランダム)">
+        <br><br>
+        <button type="submit" class="button">話題を探す</button>
+    </form>
+
+</div>
+</body>
+</html>
