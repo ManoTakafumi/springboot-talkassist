@@ -41,7 +41,11 @@
 ---
 
 ## スクリーンショット
+
+### ホーム画面
 ![ホーム画面](docs/images/home.png)
+
+### 会話例
 ![会話表示画面](docs/images/example.png)
 
 ---
