@@ -40,10 +40,13 @@
 
 ---
 
+<<<<<<< HEAD
 ## スクリーンショット
 ![ホーム画面](docs/images/home.png)
 ![会話表示画面](docs/images/example.png)
 
+=======
+>>>>>>> 247241a2c363081001648a4ce462506ae814db9e
 ## 技術スタック
 - Java 17
 - Spring Boot
