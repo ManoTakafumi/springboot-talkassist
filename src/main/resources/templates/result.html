@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Talk Assist - 話題</title>
+    <link rel="stylesheet" th:href="@{/css/destyle.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h2>おすすめの話題</h2>
+
+    <div th:if="${topic != null}" class="topic">
+        <p th:text="${topic.content}"></p>
+
+        <!--  もう一案出すボタン  -->
+        <form th:if="${topic != null}" th:action="@{/suggest}" method="get">
+            <input type="text" name="keyword" class="input"
+                   placeholder="別のキーワードを入力(未入力でランダム)"
+                   th:value="${param.keyword}">
+            <button type="submit">もう一案出す</button>
+        </form>
+    </div>
+
+    <div th:if="${topic == null}" class="topic">
+        <p th:text="${message}"></p>
+    </div>
+
+    <a href="/" class="back-link">戻る</a>
+
+</div>
+
+</body>
+</html>
